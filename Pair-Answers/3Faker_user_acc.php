@@ -20,7 +20,8 @@ $uuid = $faker->uuid;
 $fullname = $faker->name;
 $email = $faker->email;
 $username = explode('@', $email)[0];
-$password = $faker->sha256($password);
+$randomPassword = $faker->password;
+$password = hash('sha256', $randomPassword);
 $account_created = $faker->dateTimeBetween($startDate = '-2 years', $endDate = 'now')->format('Y-m-d H:i:s');
 echo'
 <!DOCTYPE html>
@@ -48,6 +49,21 @@ echo'
         </thead>
         <tbody>';
 for ($i = 0; $i < 10; $i++){
-
+    echo
+    '<tr>
+        <td>' . $uuid . '</td>
+        <td>' . $fullname . '</td>
+        <td>' . $email . '</td>
+        <td>' . $username . '</td>
+        <td>' . $password . '</td>
+        <td>' . $account_created . '</td>
+    </tr>';
 }
+echo
+        '</tbody>
+    </table>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </div>
+</body>
+</html>';
 ?>

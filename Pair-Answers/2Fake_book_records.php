@@ -50,7 +50,7 @@ echo '<!DOCTYPE html>
         '<tr>
             <td>' . $faker->catchPhrase . '</td>
             <td>' . $faker->name . '</td>
-            <td>' . $genres[array_rand($genres)] . '</td>
+            <td>' . $genres[randomelement($genres)] . '</td>
             <td>' . $faker->year($max = 'now') . '</td>
             <td>' . $faker->isbn13 . '</td>
             <td>' . $faker->realText($maxNbChars = 200, $indexSize = 2) . '</td>
