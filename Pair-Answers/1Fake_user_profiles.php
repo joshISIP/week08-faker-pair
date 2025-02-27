@@ -37,6 +37,22 @@ echo
         </thead>
         <tbody>';
 for ($i = 0; $i < 5; $i++) {
-    
+    echo 
+    '<tr>
+        <td>' . $faker->name . '</td>
+        <td>' . $faker->email . '</td>
+        <td>' . $faker->phoneNumber . '</td>
+        <td>' . $faker->date($format = 'Y-m-d', $max = 'now') . '</td>
+        <td>' . $faker->jobTitle . '</td>
+        <td>' . $faker->address . '</td>
+    </tr>';
+
 }
+echo
+        '</tbody>
+    </table>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </div
+</body>
+</html>';
 ?>
