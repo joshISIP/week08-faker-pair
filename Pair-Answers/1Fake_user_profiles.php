@@ -41,7 +41,7 @@ for ($i = 0; $i < 5; $i++) {
     '<tr>
         <td>' . $faker->name . '</td>
         <td>' . $faker->email . '</td>
-        <td>' . $faker->phoneNumber . '</td>
+        <td>' . '+639' . substr($faker->e164PhoneNumber, 4, 8) . '</td>
         <td>' . $faker->date($format = 'Y-m-d', $max = 'now') . '</td>
         <td>' . $faker->jobTitle . '</td>
         <td>' . $faker->address . '</td>
