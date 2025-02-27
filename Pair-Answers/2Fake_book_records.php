@@ -20,19 +20,33 @@ Predefined Genres:
 */
 
 require 'vendor/autoload.php';
+$genres = ['Fiction', 'Mystery', 'Thriller', 'Romance', 'Science Fiction', 'Fantasy', 'Horror', 'Historical'];
+$faker = Faker\Factory::create();
 
 
-echo '
-<!DOCTYPE html>
+echo '<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fake Book Records</title>
 </head>
 <body>
-    
-</body>
-</html>
-';
+    <h1 class="text-center">Fake Book Records</h1>
+    <table border="1" align="center">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Genre</th>
+                <th>Publication Year</th>
+                <th>ISBN</th>
+                <th>Summary</th>
+            </tr>
+        </thead>
+        <tbody>';
+    for ($i = 0; $i < 15; $i++) {
+        
+    }
+
 ?>
